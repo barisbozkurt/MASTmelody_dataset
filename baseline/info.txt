@@ -1,0 +1,4 @@
+[IMPORTANT NOTICE: a publication has been submitted announcing this dataset and
+the baseline system for automatic assessment to The 13th International
+Symposium  on Computer Music Multidisciplinary Research (CMMR). The Julia
+source codes will be available when the publication is accepted]

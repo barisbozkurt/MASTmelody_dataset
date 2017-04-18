@@ -1,0 +1,7 @@
+DATASET:
+Baris Bozkurt  <barisbozkurt0@gmail.com>
+Ozan Baysal <ozanbaysal@yahoo.com>
+
+BASELINE SYSTEM:
+Baris Bozkurt  <barisbozkurt0@gmail.com>
+Deniz Yuret <dyuret@ku.edu.tr>
