@@ -17,7 +17,7 @@ Each recording was subject to f0-detection using <a href="https://github.com/ser
 
 The performances have been graded by three jury members, who are teaching staff members of the conservatory. Grades are binary: pass, fail. This dataset includes only the samples for which all jury members agreed in grading with the same score. Hence, there are basically two categories for the performance files: i)performances which was graded as 'fail' by all the jury members , i)performances which was graded as 'pass' by all the jury members.
 
-Naming convention:
+#### Naming convention:
 The dataset is just composed of a list of text files. All other information is coded in the file names:
 'ref': reference recording on the piano
 'per': performance recording
@@ -25,7 +25,9 @@ The dataset is just composed of a list of text files. All other information is c
 'pass': performance graded as 'pass'
 
 There are basically 40 distinct melodies performed. The id for the melody makes up the first part of the file name. Examples:
+
 '51_mel1_per101559_fail.f0s.txt': Melody with ID: '51_mel1' and this is a performance file graded as fail
+
 '55_mel2_ref280758.f0s.txt': Melody with ID: '55_mel2' and this is a reference file
 
 Please cite the following publication if you use this dataset in your work:
