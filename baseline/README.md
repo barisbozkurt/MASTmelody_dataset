@@ -2,7 +2,7 @@
 
 # Baseline system for singing assessment from f0-series data
 
-This repository contains <a href="https://github.com/barisbozkurt/MASTmelody_dataset#mastmelody_dataset">a dataset of f0-series data computed from signing and piano samples</a> and a baseline system for assessment (comparing a singing sample to a reference piano recording), both of which are described in the scientific paper:
+A baseline system for assessment (comparing a singing sample to a reference piano recording):
 > Bozkurt, B., Baysal, O., Yuret, D. A Dataset and Baseline System for Singing Voice Assessment, 13th Int. Symposium on Computer Music Multidisciplinary Research, Porto, Sept. 25-28, 2017.
 ```
 @inproceedings{inproceedings,
@@ -14,6 +14,8 @@ This repository contains <a href="https://github.com/barisbozkurt/MASTmelody_dat
 ```
 
 Please cite the publication if you use this baseline system in your work.
+
+For experimenting with the tools, the following database is required: <a href="https://github.com/barisbozkurt/MASTmelody_dataset#mastmelody_dataset"> The dataset of f0-series data computed from signing and piano samples</a> 
 
 <a name="Introduction"></a>Introduction
 --------------------
