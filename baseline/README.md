@@ -23,22 +23,25 @@ The codes involve basic steps for reading and grouping data, running tests for t
 
 Dependencies (Julia packages): <a href="https://github.com/denizyuret/Knet.jl">KNET</a>, <a href="https://github.com/JuliaIO/JSON.jl">JSON</a>, <a href="https://github.com/JuliaIO/JLD.jl">JLD</a>, <a href="https://github.com/JuliaDSP/DSP.jl">DSP</a> and <a href="https://github.com/joefowler/DynamicTimeWarp.jl">Dynamic Time Warping</a> by Joe Fowler and Galen O'Neil, NIST Boulder Laboratories
 
-In Julia, these packages can be easily installed using a line of command: Pkg.add("PackageName") [ex: Pkg.add("KNET")]
+In Julia, these packages can be easily installed using a line of command: Pkg.add("PackageName") [ex: Pkg.add("KNET")] except the last one. For this reason "DynamicTimeWarp.jl" and "WindowedMatrix.jl" files were included in this repo.
 
 #### Where to start:
+First, you would need to <a href="https://github.com/barisbozkurt/MASTmelody_dataset">clone or download the repository</a> that contains both the data and this actual codes repository. The tools are designed to run with two lines of code if you do not change the folder structure of the repo.
+
 MASTbaselineProcess.jl is the batch file that contains the sequence of operations for running ONE learning experiment. It can be launched in Julia via first changing directory to your local directory where MASTbaselineProcess.jl exists:
 julia> cd("..../baseline")
+
 ... and running the batch:
 julia> include("MASTbaselineProcess.jl")
 
 Here are the steps of the process executed with this batch:
 1) Installing dependencies,
-2) Running data reading, grouping process (calling the 'runDBAPrepProcess' function implemented in "gatherMelSegsInAPool.jl") which will produce json files containing these data grouped in melody sets and a jld file("groupedMelSegData.jld") contaning all data.
+2) Running data reading (of 3618 f0 files), grouping process (calling the 'runDBAPrepProcess' function implemented in "gatherMelSegsInAPool.jl") which will produce json files containing these data grouped in melody sets and a jld file("groupedMelSegData.jld") contaning all data.
 3) The data will be re-loaded from the .jld file (which in fact does not need to be re-created in each experiment. Step 2 can be omitted to repeat the experiment using the same data)
 4) Defining MLP sizes and running the learning experiments
 5) Saving the final model
 
-So, these processes will create the following new files in your "f0data" directory:
+These processes will create the following new files in your "f0data" directory:
 1) "trainedModel.jld": contains the trainedModel
 2) Json files for each melody set: f0-series data that is grouped with respect to melody (i.e. f0-series for all performances of one single melody) "RefSegsTrue": f0 data for the reference recordings, "PerSegsTrue": f0 data for singing performances labeled as true/pass, "PerSegsFalse": f0 data for singing performances labeled as false/fail
 3) groupedMelSegData.jld: all data packed in one single jld file that can be loaded with a single command: @load(path,file)  
