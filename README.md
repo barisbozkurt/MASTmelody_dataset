@@ -40,10 +40,6 @@ There are basically 40 distinct melodies performed. The id for the melody makes 
 
 '55_mel2_ref280758.f0s.txt': Melody with ID: '55_mel2' and this is a reference file
 
-
-#### A baseline system for assessment:
-Please follow <a href="https://github.com/barisbozkurt/MASTmelody_dataset/tree/master/baseline">this link</a> for the baseline assessment system.
-
 <a name="License"></a>License
 --------------------
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
