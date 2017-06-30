@@ -1,9 +1,19 @@
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-ff69b4.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 # MASTmelody_dataset
-A dataset of pitch curves for singing assessment
 
-[IMPORTANT NOTICE: a publication has been submitted announcing this dataset to The 13th International Symposium on Computer Music Multidisciplinary Research (CMMR). The dataset will be partially available(10%) until the publication is accepted]
+This repository contains a dataset of f0-series data computed from signing and piano samples and <a href="https://github.com/barisbozkurt/MASTmelody_dataset/tree/master/baseline">a baseline system for assessment</a> (comparing a singing sample to a reference piano recording), both of which are described in the scientific paper:
+> Bozkurt, B., Baysal, O., Yuret, D. A Dataset and Baseline System for Singing Voice Assessment, 13th Int. Symposium on Computer Music Multidisciplinary Research, Porto, Sept. 25-28, 2017.
+```
+@inproceedings{inproceedings,
+  author={Bozkurt, B., Baysal, O., Yuret, D.},
+  title={A Dataset and Baseline System for Singing Voice Assessment},
+  year={2017},
+  booktitle={13th Int. Symposium on Computer Music Multidisciplinary Research, CMMR 2017}
+}
+```
+
+Please cite the publication if you use this dataset and/or the baseline system in your work.
 
 <a name="Introduction"></a>Introduction
 --------------------
@@ -30,8 +40,9 @@ There are basically 40 distinct melodies performed. The id for the melody makes 
 
 '55_mel2_ref280758.f0s.txt': Melody with ID: '55_mel2' and this is a reference file
 
-Please cite the following publication if you use this dataset in your work:
-> Bozkurt, Baysal, Yuret. Reference goes here if paper accepted, 2017.
+
+#### A baseline system for assessment:
+Please follow <a href="https://github.com/barisbozkurt/MASTmelody_dataset/tree/master/baseline">this link</a> for the baseline assessment system.
 
 <a name="License"></a>License
 --------------------
