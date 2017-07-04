@@ -75,7 +75,7 @@ function runTests(data,sizes)
   println(map(d->acc(model,d),bTestData));
   #save the model in a jld file (remember, the test-train separation was random)
   println("Saving the model to trainedModel.jld")
-  save("trainedModel.jld", "model", model);
+  save(joinpath(dbaDir,"trainedModel.jld"), "model", model);
 
   println("FINISHED!")
 end

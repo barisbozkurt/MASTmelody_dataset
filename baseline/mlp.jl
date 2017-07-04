@@ -16,9 +16,9 @@ type MLP
             w = convert(atype,winit*randn(sizes[i],sizes[i-1]))
             b = convert(atype,zeros(sizes[i],1))
             push!(m.weights, w)
-            push!(m.oparams, optimizer(w))
+            push!(m.oparams, optimizer())
             push!(m.weights, b)
-            push!(m.oparams, optimizer(b))
+            push!(m.oparams, optimizer())
         end
         return m
     end
@@ -42,7 +42,7 @@ function train!(m::MLP, data)
     for (x,y) in data
         dw = mlpgrad(m.weights, x, y)
         for i in 1:length(m.weights)
-            (m.weights[i],m.oparams[i]) = update!(m.weights[i], dw[i], m.oparams[i])
+            update!(m.weights[i], dw[i], m.oparams[i])
         end
     end
 end
