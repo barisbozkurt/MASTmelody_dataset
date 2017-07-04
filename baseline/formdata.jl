@@ -22,7 +22,7 @@ function DTWCostHist(sig1,sig2,numHistBins)
   #dist: absolute delta signal after dtw matching of two signals
   dist=abs(sig1[match1]-sig2[match2]);
   
-  h = fit(Histogram, dist, 0:1/numHistBins:1.0);
+  h = fit(Histogram, dist, 0:1/numHistBins:1.0; closed=:right);
   hist=h.weights/length(match1);
   #last two values altered to contain two other features
   hist[end]=cost/costScaleFactor;
@@ -117,8 +117,8 @@ function trntst(pdata; batch=100, splt=((50000,50000),(5000,5000),(5000,5000)))
   return bdata
 end
 
-# To load and save KnetArrays:
-import JLD: writeas, readas
-type _KnetArray; a::Array; end
-writeas(c::KnetArray) = _KnetArray(Array(c))
-readas(d::_KnetArray) = KnetArray(d.a)
+# To load and save KnetArrays: (this is part of Knet now)
+# import JLD: writeas, readas
+# type _KnetArray; a::Array; end
+# writeas(c::KnetArray) = _KnetArray(Array(c))
+# readas(d::_KnetArray) = KnetArray(d.a)

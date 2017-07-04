@@ -52,7 +52,7 @@ function runTests(data,sizes)
   # each piano-singing pair in a melodic set. The output is a tuple that carries
   # features of true-pairs(grade=pass) and features of false-pairs(grade=fail)
   println("Gathering features for training data...involves DTW computation, will take some time...(maybe 10 mins.)")
-  trainPairData=pairdata(dataTrain,numHistBins);#see loaddata.jl for implementation
+  trainPairData=pairdata(dataTrain,numHistBins);#see formdata.jl for implementation
 
   # deciding how the trainPairData should be splitted
   # to have balanced set of true and false samples

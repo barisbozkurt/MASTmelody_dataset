@@ -83,9 +83,9 @@ function mlprun(data; epochs=100, sizes=[150,24,1], model=MLP(sizes; atype = typ
     return model
 end
 
-# Adding basic missing functions in Knet:
-Base.mean(a::KnetArray) = sum(a)/length(a)
-Base.mean(a::AutoGrad.Rec) = sum(a)/length(a)
+# Adding basic missing functions in Knet: (these are part of Knet 0.8.3 now)
+# Base.mean(a::KnetArray) = sum(a)/length(a)
+# Base.mean(a::AutoGrad.Rec) = sum(a)/length(a)
 
 # Model conversion for gpu:
 function cpu2gpu(m::MLP)
