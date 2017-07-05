@@ -14,8 +14,8 @@
 # https://github.com/joefowler/DynamicTimeWarp.jl
 
 #Installing dependencies if not installed
-for p in ("Knet","JSON","JLD","DSP")
-    Pkg.installed(p) == nothing && Pkg.add(p)
+for p in ("JSON","JLD","DSP","Knet")
+    if Pkg.installed(p) == nothing; Pkg.add(p); end
 end
 
 # Setting database and Julia tools directories
@@ -37,7 +37,7 @@ runDBAPrepProcess(dbaDir);
 # a reference recording and a performance recording
 
 #Loading data to 'data' (groupedMelSegData.jld file created by the previous line)
-@load joinpath(dbaDir,"groupedMelSegData.jld");
+data = load(joinpath(dbaDir,"groupedMelSegData.jld"), "data")
 
 #Running automatic grading learning and testing steps
 #

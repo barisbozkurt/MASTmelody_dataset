@@ -15,17 +15,23 @@ This repository contains a dataset of f0-series data computed from signing and p
 
 Please cite the publication if you use this dataset and/or the baseline system in your work.
 
+The directory structure is:
+
+* baseline: Code for the baseline model. See <a href="https://github.com/barisbozkurt/MASTmelody_dataset/tree/master/baseline">baseline/README.md</a> for documentation.
+* f0data: MASTmelody dataset.
+* wavSamples: Audio samples.
+
 <a name="Introduction"></a>Introduction
 --------------------
 The MASTmelody dataset is designed and shared to facilitate comparison of algorithms in the field of automatic music performance assessment.
 
-The dataset includes pitch(f0) data extracted from audio data recorded during conservatory entrance examinations. Audio data could not be included due to the difficulties involved in completely anonymizing audio files (recognition of the singer is possible via listening). Only a few samples are provided in the 'wavSamples' directory.   
+The dataset includes pitch (f0) data extracted from audio data recorded during conservatory entrance examinations. Audio data could not be included due to the difficulties involved in completely anonymizing audio files (recognition of the singer is possible via listening). Only a few samples are provided in the 'wavSamples' directory.   
 
-There are two broad categories for the data: f0 data of the reference recording files (melodies played on the piano as reference) and f0 data of the performance recording files (recordings of the candidate in singing the melodies)  
+There are two broad categories for the data: f0 data of the reference recording files (melodies played on the piano as reference) and f0 data of the performance recording files (recordings of the candidate in singing the melodies).  
 
 Each recording was subject to f0-detection using <a href="https://github.com/sertansenturk/predominantmelodymakam"> a variant </a> of <a href="http://mtg.upf.edu/technologies/melodia"> Melodia Melody Extraction tool</a>. The results were saved as text files containing two columns: time-stamp and estimated f0 information in Hz.  
 
-The performances have been graded by three jury members, who are teaching staff members of the conservatory. Grades are binary: pass, fail. This dataset includes only the samples for which all jury members agreed in grading with the same score. Hence, there are basically two categories for the performance files: i)performances which was graded as 'fail' by all the jury members , i)performances which was graded as 'pass' by all the jury members.
+The performances have been graded by three jury members, who are teaching staff members of the conservatory. Grades are binary: pass, fail. This dataset includes only the samples for which all jury members agreed in grading with the same score. Hence, there are basically two categories for the performance files: i) performances which was graded as 'fail' by all the jury members , ii) performances which was graded as 'pass' by all the jury members.
 
 #### Naming convention:
 The dataset is just composed of a list of text files. All other information is coded in the file names:
@@ -46,4 +52,4 @@ There are basically 40 distinct melodies performed. The id for the melody makes 
 
 <a name="Acknowledgement"></a>Acknowledgement
 --------------------
-This dataset has been curated within the TUBITAK(The Scientific and Technological Research Council of Turkey) funded research project 1001-215K017 targeting development of automatic assessment tools for music performances.
+This dataset has been curated within the TUBITAK (The Scientific and Technological Research Council of Turkey) funded research project 1001-215K017 targeting development of automatic assessment tools for music performances.

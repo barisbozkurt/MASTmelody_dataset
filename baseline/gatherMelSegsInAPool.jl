@@ -175,12 +175,11 @@ end
 #loading and normalizing data in json files from the dba folder
 function loaddata(dbaDir, fminCent=4800, octaveSize=1200)
   println("Loading json files to start training")
-  cd(dbaDir);
   data  = Any[]
-  files = readdir(".")
+  files = readdir(dbaDir)
   for f in files
-    ismatch(r"^\w+\.json$", f) || continue
-    dict = JSON.parsefile(f)
+    ismatch(r"\.json$", f) || continue
+    dict = JSON.parsefile(joinpath(dbaDir,f))
     for (k,v) in dict
       if isa(v,Void) || isa(v,Int64)#skipping melodyIndex or empty arrays
         dict[k] = Any[]
@@ -204,5 +203,5 @@ function runDBAPrepProcess(dbaDir)
   println("Reading f0 files")
   poolF0s_SaveInJson(dbaDir);
   #loading and normalizing data in [0,2] range(2 octaves) and saving as a jld archive file
-  JLD.save("groupedMelSegData.jld","data",loaddata(dbaDir));
+  JLD.save(joinpath(dbaDir,"groupedMelSegData.jld"),"data",loaddata(dbaDir));
 end

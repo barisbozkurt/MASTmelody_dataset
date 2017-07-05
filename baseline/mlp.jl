@@ -16,9 +16,9 @@ type MLP
             w = convert(atype,winit*randn(sizes[i],sizes[i-1]))
             b = convert(atype,zeros(sizes[i],1))
             push!(m.weights, w)
-            push!(m.oparams, optimizer(w))
+            push!(m.oparams, optimizer())
             push!(m.weights, b)
-            push!(m.oparams, optimizer(b))
+            push!(m.oparams, optimizer())
         end
         return m
     end
@@ -42,7 +42,7 @@ function train!(m::MLP, data)
     for (x,y) in data
         dw = mlpgrad(m.weights, x, y)
         for i in 1:length(m.weights)
-            (m.weights[i],m.oparams[i]) = update!(m.weights[i], dw[i], m.oparams[i])
+            update!(m.weights[i], dw[i], m.oparams[i])
         end
     end
 end
@@ -83,9 +83,9 @@ function mlprun(data; epochs=100, sizes=[150,24,1], model=MLP(sizes; atype = typ
     return model
 end
 
-# Adding basic missing functions in Knet:
-Base.mean(a::KnetArray) = sum(a)/length(a)
-Base.mean(a::AutoGrad.Rec) = sum(a)/length(a)
+# Adding basic missing functions in Knet: (these are part of Knet 0.8.3 now)
+# Base.mean(a::KnetArray) = sum(a)/length(a)
+# Base.mean(a::AutoGrad.Rec) = sum(a)/length(a)
 
 # Model conversion for gpu:
 function cpu2gpu(m::MLP)
