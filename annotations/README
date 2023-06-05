@@ -1,13 +1,19 @@
-This folder contains new annotation files for the data set. 
+This folder contains new annotation file for the data set. 
 
-The annotations are collected in Summer 2022 within the context of another research project supported by TUBITAK 
+The annotations are collected in 2022 within the context of another research project supported by TUBITAK 
 with grant number 121E198 as a part of the Scientific and Technological Research Projects Funding Program (1001). 
 
-Re-annotations are performed by two music conservatory students of graduate-level programs who assigned an overall 
-grade via blind listening of individual performances after listening to a few renditions of the melodic pattern by 
-the jury members.
+Annotations are performed via blind listening of individual performances after listening to a few renditions of 
+the melodic pattern by the experts. The files were presented in random order (after grouping samples in terms
+of melodic patterns) (i.e. the expert annotated all samples of a melodic pattern in random order and moved to the 
+next group of samples for the next melodic pattern). 
 
 A 4-level grading system was used during the evaluations of the data set; 
 1-Completely Off, 2-Major Mistakes, 3-Minor Mistakes, and 4-Perfect. 
 
-
+Annotations were carried by 3 experts; a professor of musicology who has taken part as a jury member in entrance 
+exam auditions, and two music conservatory students of graduate-level programs. The last two annotators re-annotated
+all collection a few months after the first annotation task. The csv file contains 5 annotations in 5 columns where
+two of these columns are for the repeated annotations. To facilitate analysis, we also added columns that carry a flag
+if all annotations match (column: 'fullAgree'), the score/grade all annotations agreed on (column: 'fullAgree_score') 
+and the majority score. 
