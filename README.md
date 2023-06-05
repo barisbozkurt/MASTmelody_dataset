@@ -1,6 +1,7 @@
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-ff69b4.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 # MASTmelody_dataset
+**For an updated version of this dataset including audio files please refer to:** https://zenodo.org/record/8007358 
 
 This repository contains a dataset of f0-series data computed from signing and piano samples and <a href="https://github.com/barisbozkurt/MASTmelody_dataset/tree/master/baseline">a baseline system for assessment</a> (comparing a singing sample to a reference piano recording), both of which are described in the scientific paper:
 > Bozkurt, B., Baysal, O., Yuret, D. A Dataset and Baseline System for Singing Voice Assessment, 13th Int. Symposium on Computer Music Multidisciplinary Research, Porto, Sept. 25-28, 2017.
